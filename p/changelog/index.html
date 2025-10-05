@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<!-- Generated: 2025-10-05 14:43:53 | Version: 0.3.0 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <meta name="description" content="Complete version history and detailed changes for ChatGPT Pin Extension">
+
+    <title>Changelog - ChatGPT Pins Manager</title>
+    
+    <link rel="stylesheet" href="../assets/changelog.css?v=0.3.0&t=20251005144353">
+
+    
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Add collapsible functionality to TOC
+    const toc = document.querySelector('.toc');
+    if (toc) {
+        const versionLinks = toc.querySelectorAll('li > a');
+        
+        versionLinks.forEach(link => {
+            const li = link.parentElement;
+            const subList = li.querySelector('ul');
+            
+            if (subList) {
+                // Add collapse/expand indicator
+                const indicator = document.createElement('span');
+                indicator.innerHTML = '▼';
+                indicator.style.cssText = 'position: absolute; right: 8px; top: 50%; transform: translateY(-50%); transition: all 0.2s ease; font-size: 0.8em; cursor: pointer; user-select: none; padding: 4px 6px; border-radius: 4px; background: transparent; color: #9ca3af;';
+                link.appendChild(indicator);
+                
+                // Initially expand sub-items (not collapsed)
+                subList.style.display = 'block';
+                indicator.style.transform = 'translateY(-50%) rotate(0deg)'; // Pointing down when expanded
+                
+                // Handle expand/collapse on indicator click
+                indicator.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent link navigation
+                    e.preventDefault(); // Prevent default link behavior
+                    
+                    const isCollapsed = subList.style.display === 'none';
+                    subList.style.display = isCollapsed ? 'block' : 'none';
+                    indicator.style.transform = isCollapsed ? 'translateY(-50%) rotate(0deg)' : 'translateY(-50%) rotate(-90deg)';
+                });
+                
+                // Handle navigation on link text click (but not indicator)
+                link.addEventListener('click', function(e) {
+                    // Only navigate if the click wasn't on the indicator
+                    if (e.target !== indicator && !indicator.contains(e.target)) {
+                        const targetId = this.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            e.preventDefault();
+                            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            } else {
+                // Regular link behavior for version links without subsections
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+        });
+    }
+});
+</script>
+
+</head>
+<body>
+    
+<div class="container">
+    <div class="header">
+        <h1>Changelog - ChatGPT Pin Extension</h1>
+    </div>
+    
+    <div class="content">
+        <div class="toc-container">
+            <h3>Versions</h3>
+            <div class="toc">
+<ul>
+<li><ul>
+<li><a href="#030-2025-01-27">[0.3.0] - 2025-01-27</a><ul>
+<li><a href="#added">Added</a></li>
+<li><a href="#changed">Changed</a></li>
+<li><a href="#fixed">Fixed</a></li>
+<li><a href="#security">Security</a></li>
+</ul>
+</li>
+<li><a href="#020-2024-12-15">[0.2.0] - 2024-12-15</a><ul>
+<li><a href="#added_1">Added</a></li>
+<li><a href="#changed_1">Changed</a></li>
+<li><a href="#fixed_1">Fixed</a></li>
+</ul>
+</li>
+<li><a href="#010-2024-11-20">[0.1.0] - 2024-11-20</a><ul>
+<li><a href="#added_2">Added</a></li>
+<li><a href="#changed_2">Changed</a></li>
+<li><a href="#fixed_2">Fixed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+        </div>
+        
+        <div class="changelog">
+            <h1 id="changelog">Changelog</h1>
+<p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
+and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="030-2025-01-27">[0.3.0] - 2025-01-27</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Testing infrastructure with unit and E2E tests</li>
+<li>Focus trap implementation for all modals and popovers</li>
+<li>Svelte 5 migration with modern UI components</li>
+<li>Schema versioning system for data persistence</li>
+<li>Modal service with type-safe management</li>
+<li>Chat title rename sync across devices</li>
+<li>Chat delete sync functionality</li>
+<li>Logging system with contextual levels</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Migrated from legacy UI to Svelte 5 components</li>
+<li>Improved modal animations using Svelte transitions instead of CSS</li>
+<li>Enhanced focus management and accessibility across all components</li>
+<li>Refactored state management with modular architecture</li>
+<li>Optimized Vite build configuration and ES module handling</li>
+<li>Improved code organization with better separation of concerns</li>
+<li>Enhanced error handling and validation throughout the application</li>
+<li>Optimized bundle size and performance</li>
+<li>Updated TypeScript configuration for better type safety</li>
+<li>Enhanced i18n support with smart native language display</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Modal focus bugs and trap behavior</li>
+<li>Tag popover keyboard navigation and click detection</li>
+<li>Focus ring visibility for interactive elements</li>
+<li>ESLint configuration and code quality issues</li>
+</ul>
+<h3 id="security">Security</h3>
+<ul>
+<li>Resolved security vulnerabilities in dependencies</li>
+</ul>
+<h2 id="020-2024-12-15">[0.2.0] - 2024-12-15</h2>
+<h3 id="added_1">Added</h3>
+<ul>
+<li>Initial i18n support for multiple languages</li>
+<li>Dynamic language refresh for side panel</li>
+<li>JSON validation script for i18n messages</li>
+<li>Enhanced sidebar button styling</li>
+<li>Improved modal action buttons</li>
+</ul>
+<h3 id="changed_1">Changed</h3>
+<ul>
+<li>Migrated from legacy build system to Vite with ES modules support</li>
+<li>Updated project structure for better maintainability</li>
+<li>Enhanced validation scripts for better error reporting</li>
+</ul>
+<h3 id="fixed_1">Fixed</h3>
+<ul>
+<li>Missing pinned chats icon in sidebar</li>
+<li>Message substitutions in translations</li>
+<li>Missing translation keys</li>
+<li>JSON validation issues</li>
+</ul>
+<h2 id="010-2024-11-20">[0.1.0] - 2024-11-20</h2>
+<h3 id="added_2">Added</h3>
+<ul>
+<li>Initial release of ChatGPT Pin Chats extension</li>
+<li>Core pinning functionality for ChatGPT conversations</li>
+<li>Tag management system with color customization</li>
+<li>Search functionality for pinned chats with fuzzy matching</li>
+<li>Collapsible sidebar with toggle functionality</li>
+<li>Modal system for managing pinned chats</li>
+<li>Basic styling and animations</li>
+<li>Chrome extension manifest v3 support</li>
+<li>Cross-device sync support via Chrome storage</li>
+<li>Basic keyboard shortcuts for modal operations</li>
+<li>Color picker for tag customization</li>
+<li>ESC key support for closing modals</li>
+</ul>
+<h3 id="changed_2">Changed</h3>
+<ul>
+<li>Improved modal positioning and styling</li>
+<li>Enhanced icon consistency</li>
+<li>Better drawer animation behavior</li>
+</ul>
+<h3 id="fixed_2">Fixed</h3>
+<ul>
+<li>Icon flashing on page load</li>
+<li>Select options visibility issues</li>
+<li>Tag assignment popup behavior</li>
+<li>Modal positioning and styling inconsistencies</li>
+</ul>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Keep your ChatGPT conversations organized and accessible across all devices.</p>
+        <div style="margin-top: 15px; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+            
+            
+            
+            
+<a href="https://chromewebstore.google.com/detail/chatgpt-pins-manager/nklpecfbkbmebjnackfofnpdcliiniik" style="color: #9ca3af; text-decoration: none; border: 1px solid #4b5563; padding: 8px 16px; border-radius: 6px; display: inline-block; transition: all 0.2s ease; background: #1f2937;" onmouseover="this.style.borderColor='#6b7280'; this.style.backgroundColor='#374151'; this.style.color='#f3f4f6';" onmouseout="this.style.borderColor='#4b5563'; this.style.backgroundColor='#1f2937'; this.style.color='#9ca3af';">
+    🛒 Chrome Web Store
+</a>
+            
+            
+            
+            
+            
+<a href="../en/whats-new/" style="color: #9ca3af; text-decoration: none; border: 1px solid #4b5563; padding: 8px 16px; border-radius: 6px; display: inline-block; transition: all 0.2s ease; background: #1f2937;" onmouseover="this.style.borderColor='#6b7280'; this.style.backgroundColor='#374151'; this.style.color='#f3f4f6';" onmouseout="this.style.borderColor='#4b5563'; this.style.backgroundColor='#1f2937'; this.style.color='#9ca3af';">
+    ✨ What's New
+</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

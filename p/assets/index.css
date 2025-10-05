@@ -1,0 +1,175 @@
+/* Index Landing Page Styles */
+@import url('base.css');
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #e2e8f0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    background: #1a202c;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    max-width: 650px;
+    width: 90%;
+    border: 1px solid #2d3748;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #f7fafc;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #a0aec0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.version-info {
+    background: #2d3748;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    color: #a0aec0;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.link-card {
+    display: block;
+    padding: 1.5rem;
+    background: #2d3748;
+    border: 2px solid #4a5568;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #f7fafc;
+    transition: all 0.3s ease;
+}
+
+.link-card:hover {
+    background: #4a5568;
+    border-color: #63b3ed;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 179, 237, 0.3);
+}
+
+.link-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #f7fafc;
+}
+
+.link-description {
+    color: #a0aec0;
+    font-size: 0.95rem;
+}
+
+.language-switcher {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #4a5568;
+}
+
+.lang-label {
+    color: #a0aec0;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.lang-select {
+    background: #2d3748;
+    color: #f7fafc;
+    border: 2px solid #4a5568;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.lang-select:hover {
+    border-color: #63b3ed;
+    background: #4a5568;
+}
+
+.lang-select:focus {
+    outline: none;
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2);
+}
+
+.lang-option {
+    background: #2d3748;
+    color: #f7fafc;
+}
+
+/* Redirect page styles */
+.redirect-container {
+    text-align: center;
+    background: #1a202c;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    max-width: 400px;
+    width: 90%;
+    border: 1px solid #2d3748;
+}
+
+.spinner {
+    border: 3px solid #4a5568;
+    border-top: 3px solid #63b3ed;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.redirect-container h2 {
+    color: #f7fafc;
+    margin-bottom: 1rem;
+}
+
+.redirect-container p {
+    color: #a0aec0;
+    margin-bottom: 1rem;
+}
+
+.redirect-container a {
+    color: #63b3ed;
+    text-decoration: none;
+}
+
+.redirect-container a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles - specific to index page */
+.footer {
+    margin: 0 calc(-3rem - 1px) calc(-3rem - 1px) calc(-3rem - 1px);
+    border-radius: 0 0 12px 12px;
+    box-sizing: border-box;
+}

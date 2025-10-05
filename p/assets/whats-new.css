@@ -1,0 +1,163 @@
+/* What's New Page Styles */
+@import url('base.css');
+
+body {
+    background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1f2937;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid #374151;
+}
+
+.header {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.version {
+    background: #374151;
+    border-left: 4px solid #6366f1;
+    margin: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #4b5563;
+}
+
+.version-header {
+    background: #6366f1;
+    color: white;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.version-date {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-left: 10px;
+}
+
+.version-content {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title.added {
+    color: #10b981;
+}
+
+.section-title.changed {
+    color: #f59e0b;
+}
+
+.section-title.fixed {
+    color: #ef4444;
+}
+
+.section-title.security {
+    color: #f97316;
+}
+
+.section-title::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.section-title.added::before {
+    background: #10b981;
+}
+
+.section-title.changed::before {
+    background: #f59e0b;
+}
+
+.section-title.fixed::before {
+    background: #ef4444;
+}
+
+.section-title.security::before {
+    background: #f97316;
+}
+
+.feature-list {
+    list-style: none;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.feature-list li::before {
+    content: '•';
+    color: #9ca3af;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.highlight {
+    background: #451a03;
+    color: #fbbf24;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .version {
+        margin: 20px 15px;
+    }
+
+    .version-content {
+        padding: 15px;
+    }
+}
