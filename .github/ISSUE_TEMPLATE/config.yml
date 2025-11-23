@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Changelog & releases
+    url: https://emkej.github.io/chatgpt-pins-manager-pages/p/changelog/
+    about: Review recent changes and release notes before filing an issue.

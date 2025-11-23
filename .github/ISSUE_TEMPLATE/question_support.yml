@@ -1,0 +1,17 @@
+name: Question / support
+description: Ask for help or clarification
+title: "[Support]: "
+labels: ["question", "needs-triage"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: What do you need help with?
+      placeholder: Describe the question or support request.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include relevant steps, screenshots, or links if helpful.
