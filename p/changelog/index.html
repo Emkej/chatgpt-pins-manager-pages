@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Generated: 2025-10-29 17:07:52 | Version: 0.4.1 -->
+<!-- Generated: 2025-12-22 10:37:47 | Version: 0.5.0 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,7 +12,7 @@
 
     <title>Changelog - ChatGPT Pins Manager</title>
     
-    <link rel="stylesheet" href="../assets/changelog.css?v=0.4.1&t=20251029170752">
+    <link rel="stylesheet" href="../assets/changelog.css?v=0.5.0&t=20251222103747">
 
     
 <script>
@@ -89,33 +89,39 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="toc">
 <ul>
 <li><ul>
-<li><a href="#041-2025-10-28">[0.4.1] - 2025-10-28</a><ul>
-<li><a href="#fixed">Fixed</a></li>
+<li><a href="#050-2025-12-21">[0.5.0] - 2025-12-21</a><ul>
+<li><a href="#added">Added</a></li>
 <li><a href="#changed">Changed</a></li>
+<li><a href="#fixed">Fixed</a></li>
+</ul>
+</li>
+<li><a href="#041-2025-10-28">[0.4.1] - 2025-10-28</a><ul>
+<li><a href="#fixed_1">Fixed</a></li>
+<li><a href="#changed_1">Changed</a></li>
 </ul>
 </li>
 <li><a href="#040-2025-10-15">[0.4.0] - 2025-10-15</a><ul>
-<li><a href="#added">Added</a></li>
-<li><a href="#fixed_1">Fixed</a></li>
+<li><a href="#added_1">Added</a></li>
+<li><a href="#fixed_2">Fixed</a></li>
 </ul>
 </li>
 <li><a href="#030-2025-10-08">[0.3.0] - 2025-10-08</a><ul>
-<li><a href="#added_1">Added</a></li>
-<li><a href="#changed_1">Changed</a></li>
-<li><a href="#fixed_2">Fixed</a></li>
+<li><a href="#added_2">Added</a></li>
+<li><a href="#changed_2">Changed</a></li>
+<li><a href="#fixed_3">Fixed</a></li>
 <li><a href="#security">Security</a></li>
 </ul>
 </li>
 <li><a href="#020-2024-12-15">[0.2.0] - 2024-12-15</a><ul>
-<li><a href="#added_2">Added</a></li>
-<li><a href="#changed_2">Changed</a></li>
-<li><a href="#fixed_3">Fixed</a></li>
-</ul>
-</li>
-<li><a href="#010-2024-11-20">[0.1.0] - 2024-11-20</a><ul>
 <li><a href="#added_3">Added</a></li>
 <li><a href="#changed_3">Changed</a></li>
 <li><a href="#fixed_4">Fixed</a></li>
+</ul>
+</li>
+<li><a href="#010-2024-11-20">[0.1.0] - 2024-11-20</a><ul>
+<li><a href="#added_4">Added</a></li>
+<li><a href="#changed_4">Changed</a></li>
+<li><a href="#fixed_5">Fixed</a></li>
 </ul>
 </li>
 </ul>
@@ -130,30 +136,46 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,
 and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2 id="041-2025-10-28">[0.4.1] - 2025-10-28</h2>
+<h2 id="050-2025-12-21">[0.5.0] - 2025-12-21</h2>
+<h3 id="added">Added</h3>
+<ul>
+<li>Implemented draggable overlay vertical positioning with a configurable drag handle</li>
+<li>Added support link to the about tab for easy access to help resources</li>
+<li>Added Hindi language support</li>
+</ul>
+<h3 id="changed">Changed</h3>
+<ul>
+<li>Updated about tab to use a 2-column grid layout for better content organization</li>
+</ul>
 <h3 id="fixed">Fixed</h3>
+<ul>
+<li>Fixed hidden about tab content that was not displaying properly</li>
+<li>Fixed tag management container height issues</li>
+</ul>
+<h2 id="041-2025-10-28">[0.4.1] - 2025-10-28</h2>
+<h3 id="fixed_1">Fixed</h3>
 <ul>
 <li>Fixed countdown pause behavior when mouse is inside the quick tag popover</li>
 <li>Improved Enter key confirmation support outside the input field in quick tag popover</li>
 <li>Enhanced responsive layout for tags and pinned chats display</li>
 </ul>
-<h3 id="changed">Changed</h3>
+<h3 id="changed_1">Changed</h3>
 <ul>
 <li>Added modal type classes for better styling consistency</li>
 <li>Removed unused manage-tags-list component to reduce bundle size</li>
 </ul>
 <h2 id="040-2025-10-15">[0.4.0] - 2025-10-15</h2>
-<h3 id="added">Added</h3>
+<h3 id="added_1">Added</h3>
 <ul>
 <li>Implemented a quick tag popover that appears after pinning a chat.</li>
 <li>Added an option in the General tab of the settings modal to disable the quick tag popover.</li>
 </ul>
-<h3 id="fixed_1">Fixed</h3>
+<h3 id="fixed_2">Fixed</h3>
 <ul>
 <li>Addressed a bug where the text in expanded overlay was not clickable.</li>
 </ul>
 <h2 id="030-2025-10-08">[0.3.0] - 2025-10-08</h2>
-<h3 id="added_1">Added</h3>
+<h3 id="added_2">Added</h3>
 <ul>
 <li>Testing infrastructure with unit and E2E tests</li>
 <li>Focus trap implementation for all modals and popovers</li>
@@ -166,7 +188,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Extension update notification toast</li>
 <li>About tab with external resource links</li>
 </ul>
-<h3 id="changed_1">Changed</h3>
+<h3 id="changed_2">Changed</h3>
 <ul>
 <li>Migrated from legacy UI to Svelte 5 components</li>
 <li>Improved modal animations using Svelte transitions instead of CSS</li>
@@ -179,7 +201,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Updated TypeScript configuration for better type safety</li>
 <li>Enhanced i18n support with smart native language display</li>
 </ul>
-<h3 id="fixed_2">Fixed</h3>
+<h3 id="fixed_3">Fixed</h3>
 <ul>
 <li>Modal focus bugs and trap behavior</li>
 <li>Tag popover keyboard navigation and click detection</li>
@@ -191,7 +213,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Resolved security vulnerabilities in dependencies</li>
 </ul>
 <h2 id="020-2024-12-15">[0.2.0] - 2024-12-15</h2>
-<h3 id="added_2">Added</h3>
+<h3 id="added_3">Added</h3>
 <ul>
 <li>Initial i18n support for multiple languages</li>
 <li>Dynamic language refresh for side panel</li>
@@ -199,13 +221,13 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Enhanced sidebar button styling</li>
 <li>Improved modal action buttons</li>
 </ul>
-<h3 id="changed_2">Changed</h3>
+<h3 id="changed_3">Changed</h3>
 <ul>
 <li>Migrated from legacy build system to Vite with ES modules support</li>
 <li>Updated project structure for better maintainability</li>
 <li>Enhanced validation scripts for better error reporting</li>
 </ul>
-<h3 id="fixed_3">Fixed</h3>
+<h3 id="fixed_4">Fixed</h3>
 <ul>
 <li>Missing pinned chats icon in sidebar</li>
 <li>Message substitutions in translations</li>
@@ -213,7 +235,7 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>JSON validation issues</li>
 </ul>
 <h2 id="010-2024-11-20">[0.1.0] - 2024-11-20</h2>
-<h3 id="added_3">Added</h3>
+<h3 id="added_4">Added</h3>
 <ul>
 <li>Initial release of ChatGPT Pin Chats extension</li>
 <li>Core pinning functionality for ChatGPT conversations</li>
@@ -228,13 +250,13 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
 <li>Color picker for tag customization</li>
 <li>ESC key support for closing modals</li>
 </ul>
-<h3 id="changed_3">Changed</h3>
+<h3 id="changed_4">Changed</h3>
 <ul>
 <li>Improved modal positioning and styling</li>
 <li>Enhanced icon consistency</li>
 <li>Better drawer animation behavior</li>
 </ul>
-<h3 id="fixed_4">Fixed</h3>
+<h3 id="fixed_5">Fixed</h3>
 <ul>
 <li>Icon flashing on page load</li>
 <li>Select options visibility issues</li>
@@ -261,6 +283,14 @@ and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semant
             
 <a href="../en/whats-new/" style="color: #9ca3af; text-decoration: none; border: 1px solid #4b5563; padding: 8px 16px; border-radius: 6px; display: inline-block; transition: all 0.2s ease; background: #1f2937;" onmouseover="this.style.borderColor='#6b7280'; this.style.backgroundColor='#374151'; this.style.color='#f3f4f6';" onmouseout="this.style.borderColor='#4b5563'; this.style.backgroundColor='#1f2937'; this.style.color='#9ca3af';">
     ✨ What's New
+</a>
+
+            
+            
+            
+            
+<a href="" style="color: #9ca3af; text-decoration: none; border: 1px solid #4b5563; padding: 8px 16px; border-radius: 6px; display: inline-block; transition: all 0.2s ease; background: #1f2937;" onmouseover="this.style.borderColor='#6b7280'; this.style.backgroundColor='#374151'; this.style.color='#f3f4f6';" onmouseout="this.style.borderColor='#4b5563'; this.style.backgroundColor='#1f2937'; this.style.color='#9ca3af';">
+    ❓ Support
 </a>
         </div>
     </div>
